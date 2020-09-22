@@ -5,6 +5,5 @@ res = requests.get("https://www.google.com/search?q=%EC%B7%A8%EC%97%85+%EC%82%AC
 soup = BeautifulSoup(res.content, features="lxml")
 
 h2_tag = soup.body.h2
-#print(list(h2_tag.parent.next_siblings))
 for sibling in h2_tag.parent.next_siblings:
-    print(sibling.a)
+    print(type(sibling.a), sibling)

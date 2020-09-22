@@ -7,15 +7,17 @@ soup = BeautifulSoup(res.content, features="lxml")
 bodychildren = soup.body.children
 print(type(bodychildren), len(list(bodychildren)))
 
-for child in bodychildren:   #child 사용자 정의 변수 
+body_tag = soup.body
+for child in body_tag.children:   #child 사용자 정의 변수 
     print(type(child), repr(child))  # returns a printable representation
 
-title_tag = soup
+# Going up - .parent and .parents
+title_tag = soup.title
 print(title_tag.parent, title_tag.string.parent)
-link = soup
+link = soup.a
 print(type(link.parents), len(list(link.parents)))
 
-for parent in link.parents:
+for parent in link.parents:  # parent 사용자 정의 변수 
     print(type(parent.name), parent.name)
 
 

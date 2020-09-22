@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 print('html.parser:', BeautifulSoup("<a><b/></a>", "html.parser"))
 #<a><b></b></a>
 
-print('html.parser:', BeautifulSoup("<a></p>", "html.pareser"))
+# print('html.parser:', BeautifulSoup("<a></a>", "html.pareser"))
 #<a></a>
 print('xml:', BeautifulSoup("<a><b/></a>", "xml"))
 #<?xml version = "1.0" encoding="utf-8"?>

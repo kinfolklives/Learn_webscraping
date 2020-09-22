@@ -7,7 +7,7 @@ soup = BeautifulSoup(res.content, features="lxml")
 bodychildren = soup.body.children
 print(type(bodychildren), len(list(bodychildren)))
 
-for child in body_tag.children:   #child 사용자 정의 변수 
+for child in bodychildren:   #child 사용자 정의 변수 
     print(type(child), repr(child))  # returns a printable representation
 
 title_tag = soup

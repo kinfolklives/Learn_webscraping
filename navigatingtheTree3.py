@@ -14,7 +14,7 @@ h2p = soup.body.h2.parent
 for sibling in h2p.next_siblings:
     print(type(sibling.a), sibling.a)
     print("-"*50)
-# Thanks to 조준희님
+# referenced from joon-hee
 
 # find
 body = soup.body

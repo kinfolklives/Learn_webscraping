@@ -5,13 +5,14 @@ res = requests.get("https://www.google.com/search?q=%EC%B7%A8%EC%97%85+%EC%82%AC
 soup = BeautifulSoup(res.content, features="lxml")
 
 # siblings
-h2_tag = soup.body.h2
-for sibling in h2_tag.parent.next_siblings:
+h2p = soup.body.h2.parent
+for sibling in h2p.next_siblings:
     print(type(sibling.a), sibling.a)
-
+    print("-"*50)
+# Thanks to 조준희님
 
 # find
 body = soup.body
 for a in  body.find_all("a", class_="fohFr"):
     print(a)
-    print("-"*100)
+    print("-"*50)

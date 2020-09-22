@@ -6,4 +6,4 @@ soup = BeautifulSoup(res.content, features="lxml")
 
 h2_tag = soup.body.h2
 for sibling in h2_tag.parent.next_siblings:
-    print(type(sibling.a), sibling)
+    print(type(sibling.a), sibling.a)

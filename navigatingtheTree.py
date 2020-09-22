@@ -1,0 +1,21 @@
+from bs4 import BeautifulSoup
+import requests
+
+res = requests.get('https://movie.naver.com/movie/point/af/list.nhn')
+soup = BeautifulSoup(res.content, features="lxml")
+#Going down - .children
+bodychildren = soup.body.children
+print(type(bodychildren), len(list(bodychildren)))
+
+for child in body_tag.children:   #child 사용자 정의 변수 
+    print(type(child), repr(child))  # returns a printable representation
+
+title_tag = soup
+print(title_tag.parent, title_tag.string.parent)
+link = soup
+print(type(link.parents), len(list(link.parents)))
+
+for parent in link.parents:
+    print(type(parent.name), parent.name)
+
+

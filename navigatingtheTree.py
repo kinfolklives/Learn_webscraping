@@ -1,8 +1,11 @@
 from bs4 import BeautifulSoup
 import requests
 
-res = requests.get('https://movie.naver.com/movie/point/af/list.nhn')
-soup = BeautifulSoup(res.content, features="lxml")
+with open('datas/sample02.html') as fp:
+    soup = BeautifulSoup(fp, features='lxml')
+
+# res = requests.get('https://movie.naver.com/movie/point/af/list.nhn')
+# soup = BeautifulSoup(res.content, features="lxml")
 
 #Going down - .children
 bodychildren = soup.body.children

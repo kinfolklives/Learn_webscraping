@@ -4,6 +4,7 @@ import requests
 with open('datas/sample02.html') as fp:
     soup = BeautifulSoup(fp, features='lxml')
 
+    
 print(type(soup.find(id='link3')), soup.find(id="link3"))
 
 print(type(soup.find_all(name='a')), soup.find_all(name='a'))

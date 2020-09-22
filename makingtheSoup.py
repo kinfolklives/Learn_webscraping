@@ -7,6 +7,6 @@ with open(path) as fp:
 
 import requests
 res = requests.get('https://movie.naver.com/movie/point/af/list.nhn')
-print(res.status_code, res.content)
+#print(res.status_code, res.content)
 soup = BeautifulSoup(res.content, features="lxml")
-print(type(soup), soup.prettify())
+print(type(soup), soup)

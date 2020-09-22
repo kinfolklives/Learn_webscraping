@@ -10,7 +10,7 @@ print(type(bodychildren), len(list(bodychildren)))
 
 body_tag = soup.body
 for child in body_tag.children:   #child 사용자 정의 변수 
-    print(type(child), repr(child))  # returns a printable representation
+    print(type(child), repr(child))  # returns a printable representation; debug console 에서 repr(child)
 
 # Going up - .parent and .parents
 title_tag = soup.title

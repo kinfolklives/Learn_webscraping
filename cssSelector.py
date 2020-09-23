@@ -6,3 +6,5 @@ soup = BeautifulSoup(res.content, 'lxml')
 links = soup.select("a[href]")
 for link in links:
     print(type(link), link)    
+
+# \"  \" 문자로 인식

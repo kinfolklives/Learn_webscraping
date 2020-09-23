@@ -13,6 +13,4 @@ for row in table.find_all('tr')[1:]:
     new_table.append([column.get_text() for column in columns])
 df = pd.DataFrame(new_table, columns=['ContinentCode', 'Alpah2', 'Alpah3', 'PhoneCode', 'Name'])
 df['Name'] = df['Name'].str.replace("\n","")
-
-
-
+print(new_table)

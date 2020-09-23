@@ -10,7 +10,7 @@ with open(path) as fp:
     a = soup.select("body a") # body 아래 a 모두
     print(type(a), a)
 
-    a = soup.select("head > title")  # head 아래 타이틀만 
+    a = soup.select("head > title")  # head 아래 타이틀만
     print(type(a), a)
 
     a = soup.select("p > a") # p 아래 a 모두
@@ -41,4 +41,4 @@ with open(path) as fp:
     print(type(a), a)
 
     
-
+# https://www.w3schools.com/cssref/css_selectors.asp

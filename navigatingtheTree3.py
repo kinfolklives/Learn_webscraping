@@ -16,3 +16,5 @@ body = soup.body
 for a in  body.find_all("a", class_="fohFr"):
     print(a)
     print("-"*50)
+
+    

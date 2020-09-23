@@ -12,3 +12,6 @@ name = body.find("a", id="NM_set_home_btn")
 print(name.string)
 
 
+# links 수집 
+# 1. 특정 div 가져오기 
+# 2. 

@@ -10,25 +10,43 @@ import time
 import requests
 import sqlite3
 
+for x in range(0, 21):
+    # time.sleep(5)
+    url = "https://movie.naver.com/movie/point/af/list.nhn?&page={}"
+    res = requests.get(url.format(x))
+    
+    soup = BeautifulSoup(res.content, 'lxml')
 
-res = requests.get('https://movie.naver.com/movie/point/af/list.nhn')
-soup = BeautifulSoup(res.content, 'lxml')
-# number
-number = soup.select("td.ac.num")
-for num in number:
-    print(num)
-# print(type(number), number.string) # e.tag
+    # 번호
+    number = soup.select("td.ac.num")
+    for num in number:
+        print(num.text)
 
-# movie name
-m_title = soup.select("a.movie.color_b")
-for t in m_title:
-    print(t.string)
-#print(type (m_name), m_name.get_text()) # e.tag
+    # 제목
+    title = soup.select("a.movie.color_b")
+    for tit in title:
+        print(tit.string)
 
-# review 2
-review = soup.select(".list_netizen > tbody:nth-child(4) > tr:nth-child(4) > td:nth-child(2)")[0]
-print(review.text.split('\n')[5])
+    #리뷰, 평점 
+    data = soup.select("td.title")
+    for rev in data:  
+        print(rev.text.split('\n')[5])
+    for sco in data:
+        print(sco.text.split('\n')[3])
 
+    # 리스트 만들기
+    NUMBER = [num.text for num in number]
+    TITLE = [tit.text for tit in title]
+    REVIEW = [rev.text.split('\n')[5] for rev in data]
+    SCORE = [sco.text.split('\n')[3] for sco in data]
+    #print(NUMBER, TITLE, REVIEW, SCORE)
 
-
-#url = 'https://go.drugbank.com/drugs?page={}'
+    for moviedata in zip(NUMBER, TITLE, REVIEW, SCORE):
+        with sqlite3.connect("test02") as con:
+            cursor = con.cursor()
+            query = """
+                insert into TEST01 (NUMBER, TITLE, REVIEW, SCORE)
+                values (?,?,?,?)
+                """
+            cursor.execute(query, moviedata)
+        con.commit()

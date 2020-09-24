@@ -39,7 +39,6 @@ for x in range(0, 21):
     TITLE = [tit.text for tit in title]
     REVIEW = [rev.text.split('\n')[5] for rev in data]
     SCORE = [sco.text.split('\n')[3] for sco in data]
-<<<<<<< HEAD
     print(NUMBER, TITLE, REVIEW, SCORE)
 
     # DB
@@ -48,15 +47,6 @@ for x in range(0, 21):
             cursor = con.cursor()
             query = """
                 insert into TASK01 (NUMBER, TITLE, REVIEW, SCORE)
-=======
-    #print(NUMBER, TITLE, REVIEW, SCORE)
-
-    for moviedata in zip(NUMBER, TITLE, REVIEW, SCORE):
-        with sqlite3.connect("test02") as con:
-            cursor = con.cursor()
-            query = """
-                insert into TEST01 (NUMBER, TITLE, REVIEW, SCORE)
->>>>>>> 034b7941fbf07cb35abeac4376cf0a1d872f2d81
                 values (?,?,?,?)
                 """
             cursor.execute(query, moviedata)

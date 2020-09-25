@@ -37,7 +37,7 @@
   "table": {
     "tables": [
       {
-        "name": "TEST01",
+        "name": "TASK01",
         "comment": "",
         "columns": [
           {
@@ -61,7 +61,7 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "53537e3b-ce85-657f-1058-8d7dff16994f"
+            "id": "84d12dd5-b545-5b9e-27ea-1015936c2563"
           },
           {
             "name": "TITLE",
@@ -84,7 +84,7 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "4fc20aab-75c8-41fb-1fbc-a2d5244e574e"
+            "id": "482cd4ae-8461-40f1-f99d-cad05355ff76"
           },
           {
             "name": "REVIEW",
@@ -107,7 +107,7 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "d364b1f0-ff1a-9a5d-1be9-f37c69ac5294"
+            "id": "5053ac2e-d746-e1b3-9165-c647e6e15dc7"
           },
           {
             "name": "SCORE",
@@ -130,18 +130,18 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "391cfb29-ed3c-9c77-40eb-48ee2cee7c1d"
+            "id": "e45b7e4d-8597-cd6f-27f2-b5ae6c858244"
           }
         ],
         "ui": {
           "active": false,
-          "left": 201,
-          "top": 101,
-          "zIndex": 21,
+          "left": 200.83333330021964,
+          "top": 100.83333330021965,
+          "zIndex": 37,
           "widthName": 60,
           "widthComment": 60
         },
-        "id": "ac53e616-a5e3-630f-ef4f-b949dd51933f"
+        "id": "5b77b07c-98d8-15da-8919-26636a9391f0"
       }
     ],
     "indexes": []

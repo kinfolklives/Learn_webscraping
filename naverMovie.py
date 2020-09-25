@@ -10,7 +10,6 @@ import time
 import requests
 import sqlite3
 
-
 res = requests.get('https://movie.naver.com/movie/point/af/list.nhn')
 soup = BeautifulSoup(res.content, 'lxml')
 # number

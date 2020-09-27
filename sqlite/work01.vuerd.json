@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
+    "scrollTop": 3.3333332538604736,
+    "scrollLeft": 5.8333330154418945,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -37,7 +37,7 @@
   "table": {
     "tables": [
       {
-        "name": "TASK01",
+        "name": "NaverMovie",
         "comment": "",
         "columns": [
           {
@@ -137,11 +137,164 @@
           "active": false,
           "left": 200.83333330021964,
           "top": 100.83333330021965,
-          "zIndex": 37,
-          "widthName": 60,
+          "zIndex": 40,
+          "widthName": 73,
           "widthComment": 60
         },
         "id": "5b77b07c-98d8-15da-8919-26636a9391f0"
+      },
+      {
+        "name": "WeatherInfo",
+        "comment": "",
+        "columns": [
+          {
+            "name": "city_name",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "52baaa52-3749-230a-6775-1eb575df4390"
+          },
+          {
+            "name": "main_weather",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 84,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "79e7b074-165b-e722-4366-aeae7ecff8f2"
+          },
+          {
+            "name": "description",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 67,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "18a19429-4e77-1832-ff6e-44569055c342"
+          },
+          {
+            "name": "temperature",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 75,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3497962b-9b29-4455-6ae9-31944c7d199a"
+          },
+          {
+            "name": "feels_like",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "20a9de28-9436-e00a-07e0-1959d65c37e3"
+          },
+          {
+            "name": "humidity",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "9e4a0da7-1014-5735-5f4f-152443a50a4d"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 195.83333349890208,
+          "top": 270.8333265450268,
+          "zIndex": 70,
+          "widthName": 75,
+          "widthComment": 60
+        },
+        "id": "3a97bc68-b1c2-04b3-2c66-35babf19710f"
       }
     ],
     "indexes": []

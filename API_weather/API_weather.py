@@ -2,11 +2,13 @@ import requests
 import json
 import sqlite3
 import time 
+
 # 1. 데이터 열기 + 읽어오기
 url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
 apikey = '15a69c44009dea19b327ba81ecb4d2b7'
 # cities = "london" # 1. 도시이름 나열? 2. json 파일 이용해서 가져오기?
-with open("citylist.json", 'rt', encoding='UTF8') as citylist:
+# 경로 error
+with open("C:\Develop\learn_webscraping\API_weather\citylist.json", 'rt', encoding='UTF8') as citylist:
     clist = json.load(citylist)
 
 cityList = []
@@ -43,15 +45,16 @@ for i in range(0,31):
 
     # 4. DB 저장 
     for weatherdata in zip(cityList, mainList, descList, tempList, feelsList, humList):
-        print(weatherdata)
-        # with sqlite3.connect("") as con:
-        #     cursor = con.cursor()
-        #     query = """
-        #         insert into TASK01 ()
-        #         values (?,?)
-        #         """
-        #     cursor.execute(query, weatherdata)
-        # con.commit()
+        # print(weatherdata)
+        with sqlite3.connect("C:\Develop\learn_webscraping\sqlite\db.choi") as con:
+            # print(weatherdata)
+            cursor = con.cursor()
+            query = """
+                insert into WeatherInfo (city_name, main_weather, description, temperature, feels_like, humidity)
+                values (?,?,?,?,?,?)
+                """
+            cursor.execute(query, weatherdata)
+        con.commit()
 
 
     

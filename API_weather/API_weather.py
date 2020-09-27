@@ -29,7 +29,7 @@ for i in range(0,31):
     if res.status_code == 200:
         rt_dict = json.loads(res.content)
 
-    # 2. 원하는 정보 얻기 (current weather)
+    # 2. 원하는 정보 얻기2 (the others)
     main = rt_dict['weather'][0]['main']
     desc = rt_dict['weather'][0]['description']
     temp = rt_dict['main']['temp']

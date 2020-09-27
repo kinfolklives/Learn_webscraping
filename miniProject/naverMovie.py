@@ -43,10 +43,10 @@ for x in range(0, 21):
 
     # DB
     for moviedata in zip(NUMBER, TITLE, REVIEW, SCORE):
-        with sqlite3.connect("sqlite/task01") as con:
+        with sqlite3.connect("C:\Develop\learn_webscraping\sqlite\db.choi") as con:
             cursor = con.cursor()
             query = """
-                insert into TASK01 (NUMBER, TITLE, REVIEW, SCORE)
+                insert into NaverMovie (NUMBER, TITLE, REVIEW, SCORE)
                 values (?,?,?,?)
                 """
             cursor.execute(query, moviedata)

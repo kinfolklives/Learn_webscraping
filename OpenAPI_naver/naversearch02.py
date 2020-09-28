@@ -16,14 +16,15 @@ request.add_header("X-Naver-Client-Secret",client_secret)
 
 with urllib.request.urlopen(request) as result:
     data = json.loads(result.read().decode('utf8'))
+    print(data)
     print(type(data), data.keys())
     # dict_keys(['lastBuildDate', 'total', 'start', 'display', 'items']) 
     # lastBuildDate/ items - title, link, 
-    
+
     date = data['lastBuildDate']
     title = data['items'][0]['title']
     link = data['items'][0]['link']
-    print(type(title))
+    # print(type(title))
     # rescode = response.getcode()
     # print(rescode)
 
@@ -35,14 +36,14 @@ with urllib.request.urlopen(request) as result:
     naverlink.append(link)
     
 # 4. DB 저장 
-for naverdata in zip(naverdate, navertitle, naverlink):
-    # print(naverdate)
-    with sqlite3.connect("/home/rapa01/Documents/Develop/learn_webscraping/sqlite/db.choi") as con:
-        # print(naverdata)
-        cursor = con.cursor()
-        query = """
-            insert into NaverAPI (date, title, link)
-            values (?,?,?)
-            """
-        cursor.execute(query, naverdata)
-    con.commit()
+    for naverdata in zip(naverdate, navertitle, naverlink):
+        # print(naverdate)
+        with sqlite3.connect("/home/rapa01/Documents/Develop/learn_webscraping/sqlite/db.choi") as con:
+            # print(naverdata)
+            cursor = con.cursor()
+            query = """
+                insert into NaverAPI (date, title, link)
+                values (?,?,?)
+                """
+            cursor.execute(query, naverdata)
+        con.commit()

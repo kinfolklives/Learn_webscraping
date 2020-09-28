@@ -14,24 +14,29 @@ request = urllib.request.Request(url)
 request.add_header("X-Naver-Client-Id",client_id)
 request.add_header("X-Naver-Client-Secret",client_secret)
 
-with urllib.request.urlopen(request) as response:
-    data = json.loads(response.read().decode('utf8'))
+with urllib.request.urlopen(request) as result:
+    data = json.loads(result.read().decode('utf8'))
     print(type(data), data.keys())
     print(data['lastBuildDate'])
     # dict_keys(['lastBuildDate', 'total', 'start', 'display', 'items']) 
     # lastBuildDate/ items - title, link, 
     
-    date = data['lastBuilDate']
+    date = data['lastBuildDate']
+    title = data['items']['title']
+    link = data['items']['link']
         
     # rescode = response.getcode()
     # print(rescode)
 
-    naverdata = []
-    naverdata.append(date)
-    print(naverdata)
-
+    naverdate = []
+    navertitle = []
+    naverlink = []
+    naverdate.append(date)
+    navertitle.append(title)
+    naverlink.append(link)
+    
 # 4. DB 저장 
-for weatherdata in zip(cityList, mainList, descList, tempList, feelsList, humList):
+for naverdata in zip(naverdate, navertile, naverlink):
     # print(weatherdata)
     with sqlite3.connect("C:\Develop\learn_webscraping\sqlite\db.choi") as con:
         # print(weatherdata)
@@ -41,4 +46,4 @@ for weatherdata in zip(cityList, mainList, descList, tempList, feelsList, humLis
             values (?,?,?,?,?,?)
             """
         cursor.execute(query, weatherdata)
-    con.commit(
+    con.commit()

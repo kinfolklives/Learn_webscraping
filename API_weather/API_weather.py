@@ -55,6 +55,3 @@ for i in range(0,31):
                 """
             cursor.execute(query, weatherdata)
         con.commit()
-
-
-    

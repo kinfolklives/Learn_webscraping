@@ -18,7 +18,7 @@ tempList =[]
 feelsList =[]
 humList = []
 for i in range(0,31):
-    time.sleep(1)
+    time.sleep(5)
     # 2. 원하는 정보 얻기 (city)
     cities = clist[i]['name']
     cities = cities

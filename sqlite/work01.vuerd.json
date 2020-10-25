@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 3.3333332538604736,
-    "scrollLeft": 5.8333330154418945,
+    "scrollTop": 0,
+    "scrollLeft": 0,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -41,7 +41,8 @@
         "comment": "",
         "columns": [
           {
-            "name": "NUMBER",
+            "id": "a5169274-9852-923e-9ebc-9128962f85d1",
+            "name": "",
             "comment": "",
             "dataType": "INT",
             "default": "",
@@ -60,10 +61,10 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "84d12dd5-b545-5b9e-27ea-1015936c2563"
+            }
           },
           {
+            "id": "d0c7035b-f653-9292-c7c4-d23c011fa89f",
             "name": "TITLE",
             "comment": "",
             "dataType": "TEXT",
@@ -83,10 +84,10 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "482cd4ae-8461-40f1-f99d-cad05355ff76"
+            }
           },
           {
+            "id": "112eb6f0-9b8d-bea3-3393-4c1ffab463b7",
             "name": "REVIEW",
             "comment": "",
             "dataType": "TEXT",
@@ -106,10 +107,10 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "5053ac2e-d746-e1b3-9165-c647e6e15dc7"
+            }
           },
           {
+            "id": "694eaace-c8c9-284b-ba09-2592b75a6d72",
             "name": "SCORE",
             "comment": "",
             "dataType": "TEXT",
@@ -129,25 +130,25 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "e45b7e4d-8597-cd6f-27f2-b5ae6c858244"
+            }
           }
         ],
         "ui": {
           "active": false,
-          "left": 200.83333330021964,
-          "top": 100.83333330021965,
-          "zIndex": 40,
-          "widthName": 73,
+          "left": 50,
+          "top": 50,
+          "zIndex": 2,
+          "widthName": 74,
           "widthComment": 60
         },
-        "id": "5b77b07c-98d8-15da-8919-26636a9391f0"
+        "id": "2c8ad55e-3c27-4014-13a6-e81546a5e136"
       },
       {
         "name": "WeatherInfo",
         "comment": "",
         "columns": [
           {
+            "id": "7a9375fe-bf66-6691-e15f-f11e091ae718",
             "name": "city_name",
             "comment": "",
             "dataType": "TEXT",
@@ -163,14 +164,14 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 66,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "52baaa52-3749-230a-6775-1eb575df4390"
+            }
           },
           {
+            "id": "571bfab7-1c90-0f19-3516-847e26519fe8",
             "name": "main_weather",
             "comment": "",
             "dataType": "TEXT",
@@ -186,14 +187,14 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 84,
+              "widthName": 90,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "79e7b074-165b-e722-4366-aeae7ecff8f2"
+            }
           },
           {
+            "id": "4312e51b-dbd8-be1e-fb97-f2ed105ccfb1",
             "name": "description",
             "comment": "",
             "dataType": "TEXT",
@@ -209,14 +210,14 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 67,
+              "widthName": 71,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "18a19429-4e77-1832-ff6e-44569055c342"
+            }
           },
           {
+            "id": "941540b7-07b6-304a-6508-92da4970e1d0",
             "name": "temperature",
             "comment": "",
             "dataType": "TEXT",
@@ -232,14 +233,14 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 75,
+              "widthName": 78,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "3497962b-9b29-4455-6ae9-31944c7d199a"
+            }
           },
           {
+            "id": "243162a8-5712-d766-e731-5dbc53a2151f",
             "name": "feels_like",
             "comment": "",
             "dataType": "TEXT",
@@ -259,10 +260,10 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "20a9de28-9436-e00a-07e0-1959d65c37e3"
+            }
           },
           {
+            "id": "fcadfe97-465b-ce2d-469d-9eb81a0f882e",
             "name": "humidity",
             "comment": "",
             "dataType": "INT",
@@ -282,19 +283,102 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "9e4a0da7-1014-5735-5f4f-152443a50a4d"
+            }
           }
         ],
         "ui": {
           "active": false,
-          "left": 195.83333349890208,
-          "top": 270.8333265450268,
-          "zIndex": 70,
-          "widthName": 75,
+          "left": 38,
+          "top": 211,
+          "zIndex": 3,
+          "widthName": 76,
           "widthComment": 60
         },
-        "id": "3a97bc68-b1c2-04b3-2c66-35babf19710f"
+        "id": "0b48a532-cf5b-e752-bc86-3803681fbf95"
+      },
+      {
+        "name": "NaverAPI",
+        "comment": "",
+        "columns": [
+          {
+            "name": "date",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "af8c195b-84e6-1d3a-d513-1bd5ac88351a"
+          },
+          {
+            "name": "title",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3061a325-811b-0399-8d85-e16a4007fc94"
+          },
+          {
+            "name": "link",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "06a070ee-a9bf-d0f0-c9f2-1873623412fd"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 514,
+          "top": 83,
+          "zIndex": 28,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "a9aa7938-23b2-9996-92cc-a1544df91710"
       }
     ],
     "indexes": []
